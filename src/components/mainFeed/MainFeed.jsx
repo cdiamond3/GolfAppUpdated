@@ -5,6 +5,9 @@ export default function MainFeed() {
     return (
         <div className="mainFeed">
             <Posts />
+            <Posts />
+            <Posts />
+            <Posts />
         </div>
     )
 }

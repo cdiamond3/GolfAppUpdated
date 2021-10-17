@@ -3,28 +3,28 @@ import "./post.css"
 export default function Post() {
     return (
         <div className="post">
-            <img
-                src="https://venngage-wordpress.s3.amazonaws.com/uploads/2020/10/Anatomy-of-the-Perfect-Blog-Post.png"
-                alt=""
-                className="postImg"
-            />
             <div className="postInfo">
                 <span className="postTitle">
                     <h3>Fix My Slice </h3>
                 </span>
-                <hr />
-                <span className="postDate"> 1 Hour Ago </span>
+            <span className="postDate"> 1 Hour Ago </span>
             </div>
+            <img
+                src="https://www.leadersedge.com/wp-content/uploads/2020/09/1020_TechNoSavvy_Briefly_AI-Gets-into-the-swing.jpg"
+                alt=""
+                className="postImg"
+            />
             <p className="postDescription">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                My Ball Won't Stop Going Right
             </p>
-            <br></br>
             <div className="commentsArea">
                 <p2> Comments </p2>
                 <hr />
-                <p2> User: Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p2>
-                <br />
                 <input type="text" />
+                <i className="fas fa-comment"></i>
+                <br />
+                <br />
+                <p2> User: You Are Coming Over The Top. </p2>
             </div>
         </div>
     )

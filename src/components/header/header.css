@@ -4,7 +4,7 @@
     position: sticky;
     top: 0;
     display: flex;
-    background-color: rgb(126, 201, 101);
+    background-color: rgb(215, 255, 186);
     align-items: center;
     font-family: "Josefin Sans", sans-serif;
     border-radius: 8px;
@@ -69,13 +69,13 @@
     object-fit: cover;
     position: absolute;
     right: 75px;
-    top:22px;
+    top: 22px;
     cursor: pointer;
 }
 
 .loginButton {
     position: absolute;
     right: 15px;
-    top:35px;
+    top: 35px;
     cursor: pointer;
 }

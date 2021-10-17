@@ -2,7 +2,9 @@
     margin: 25px;
     width: 225px;
     height: 100%;
-    background-color: #fff;
+    background-color: rgb(165, 155, 155);
+    border: black;
+    border-radius: 7px;
 }
 
 /* margin: top right bottom left */
