@@ -6,8 +6,8 @@ export default function Post() {
             <div className="postInfo">
                 <span className="postTitle">
                     <h3>Fix My Slice </h3>
-                </span>
             <span className="postDate"> 1 Hour Ago </span>
+                </span>
             </div>
             <img
                 src="https://www.leadersedge.com/wp-content/uploads/2020/09/1020_TechNoSavvy_Briefly_AI-Gets-into-the-swing.jpg"
@@ -15,7 +15,7 @@ export default function Post() {
                 className="postImg"
             />
             <p className="postDescription">
-                My Ball Won't Stop Going Right
+                My Ball Won't Stop Going Right!!
             </p>
             <div className="commentsArea">
                 <p2> Comments </p2>
@@ -29,3 +29,4 @@ export default function Post() {
         </div>
     )
 }
+
