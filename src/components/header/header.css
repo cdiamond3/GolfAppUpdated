@@ -4,7 +4,10 @@
     position: sticky;
     top: 0;
     display: flex;
-    background-color: rgb(215, 255, 186);
+    background-color: rgb(255, 255, 255, 0.3);
+    border: black;
+    border-radius: 20px;
+    backdrop-filter: blur(7px);
     align-items: center;
     font-family: "Josefin Sans", sans-serif;
     border-radius: 8px;
@@ -77,5 +80,12 @@
     position: absolute;
     right: 15px;
     top: 35px;
+    cursor: pointer;
+}
+
+.uploadButton {
+    cursor: pointer;
+}
+.topIcon {
     cursor: pointer;
 }

@@ -1,8 +1,13 @@
 .mainFeed {
     display: flex;
     flex-wrap: wrap;
+    flex: 8;
     margin: 0;
     padding: 0;
     height: 125%;
-    background-color: rgb(215, 255, 186);
+    width: 100%;
+    background-image: url("https://mpng.subpng.com/20190519/vra/kisspng-golf-course-open-championship-golf-balls-tournamen-golf-png-images-free-download-5ce1ded5e58945.8746742915583065179402.jpg"); 
+    background-repeat:  no-repeat;
+    background-size: cover;
+    background-color: white;
 }

@@ -2,12 +2,10 @@ import './App.css';
 import Header from './components/header/Header';
 import MainFeed from './components/mainFeed/MainFeed';
 import TopSwings from './components/topSwings/TopSwings';
-import { useEffect,useState } from 'react'
-
-
+import { useEffect } from 'react'
+import About from './components/about/About';
 
 function App() {
-
 
   useEffect(() => {
     fetch("http://localhost:3000/users")
@@ -21,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <About />
       <MainFeed />
       <TopSwings />
     </div>

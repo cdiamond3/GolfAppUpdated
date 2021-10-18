@@ -2,9 +2,10 @@
     margin: 25px;
     width: 225px;
     height: 100%;
-    background-color: rgb(165, 155, 155);
-    border: black;
-    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.494);
+    border-radius: 20px;
+    backdrop-filter: blur(7px);
+    box-shadow: 24, 24, 24, black;
 }
 
 /* margin: top right bottom left */
@@ -42,7 +43,7 @@
 .postDescription {
     font-family: "Varela Round", sans-serif;
     font-size: 14px;
-    color: #444;
+    color: rgb(255, 255, 255);
     line-height: 24px; 
     overflow: hidden;
     text-overflow: ellipsis;
