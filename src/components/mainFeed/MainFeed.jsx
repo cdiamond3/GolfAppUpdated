@@ -1,10 +1,10 @@
 import Posts from "../postsArea/PostArea"
 import "./mainFeed.css"
 
-export default function MainFeed() {
+export default function MainFeed({user}) {
     return (
         <div className="mainFeed">
-            <Posts />
+            <Posts user={user}/>
             <Posts />
             <Posts />
             <Posts />
