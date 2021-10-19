@@ -20,49 +20,53 @@ export default function Header() {
                     <i className="topIcon fab fa-google-play"></i>
                     <i className="topIcon fab fa-instagram"></i>
                     <i className="topIcon fab fa-facebook"></i>
+                    <div className="headerTitle">
+                        <i> Pocket Caddie </i>
+                    </div>
                 </div>
-                <ul className="leftButtons">
-                    <li className="buttons">Top Coaches</li>
-                    <li className="searchButton"> Search For Help </li>
-                </ul>
+                <button
+                    className="teacherButton">
+                    Find A Teacher
+                </button>
             </div>
+
             <div className="center">
-                <div className="headerTitle">
-                    <h1> My Pocket Caddie </h1>
-                </div>
+                <input type="text" className="searchBar" placeholder="Search Swings" />
             </div>
+
             <div className="topRight">
                 <ul className="rightButtons">
-                    <i className="uploadButton fas fa-upload"> Upload Swing</i>
+                    <i className="uploadButton fas fa-upload"></i>
                 </ul>
+
                 <button
                     onClick={handlePopup}
                     className="loginButton">
                     Login
                 </button>
+
                 {openPopup && <Popup
                     content={<>
                         <form class="form-container">
                             <h1>Login</h1>
-
                             <label for="email"><b>Email</b></label>
                             <input type="text" placeholder="Enter Email" name="email" required />
 
-                                <label for="psw"><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" name="psw" required />
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required />
 
-                                    <button type="submit" class="btn">Login</button>
-                                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                                </form>
-                            </>}
-                            handleClose={handlePopup}
+                            <button type="submit" class="btn">Login</button>
+                            <button type="button" class="btn cancel" onClick={handlePopup}>Close</button>
+                        </form>
+                    </>}
+                    handleClose={handlePopup}
                 />}
-                            <img
-                                className="topImg"
-                                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                                alt=""
-                            />
-                        </div>
-                    </div>
+                <img
+                    className="topImg"
+                    src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                    alt=""
+                />
+            </div>
+        </div>
     )
 }

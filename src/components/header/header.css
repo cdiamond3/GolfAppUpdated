@@ -4,7 +4,7 @@
     position: sticky;
     top: 0;
     display: flex;
-    background-color: rgb(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.44);
     border: black;
     border-radius: 20px;
     backdrop-filter: blur(7px);
@@ -15,53 +15,32 @@
 }
 
 .topLeft, .topRight {
-    flex: 7;
+    flex: 10;
     display: flex;
-    align-content: center;
-    justify-content: center;
 }
 
 .center {
-    flex: 6;
+    display: flex;
+    flex: 5;
 }
 
 .headerTitle {
     margin-top: 10px;
+    margin-left: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
+    font-size: 24px;
 }
 
 .rightButtons {
     display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    margin-right: 100px;
-}
-
-.leftButtons {
-    display: flex;
-    justify-content: center;
     list-style: none;
 }
 
 .buttons {
     display: flex;
     text-align: center;
-    margin-right: 20px;
+    margin-left: 0%;
     font-size: 16px;
-    cursor: pointer;
-}
-
-.searchButton {
-    text-align: center;
-    width: 100px;
-    margin-bottom: -5px;
-    font-size: 14px;
     cursor: pointer;
 }
 
@@ -84,8 +63,41 @@
 }
 
 .uploadButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
     cursor: pointer;
+    font-size: 38px;
 }
+
 .topIcon {
     cursor: pointer;
+}
+
+.searchBar {
+    width: 275px;
+    height: 40px;
+    background-color: rgba(178, 253, 184, 0.44);
+    border: black;
+    border-radius: 20px;
+    backdrop-filter: blur(7px);
+    cursor: text;
+    line-height: 75;
+}
+
+.searchBar::-webkit-input-placeholder {
+    font-size: 24px;
+    text-align: center;
+}
+
+.teacherButton {
+    display: flex;
+    flex-direction: row;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-left: 40px;
 }

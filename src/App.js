@@ -7,21 +7,21 @@ import About from './components/about/About';
 
 function App() {
 
-  useEffect(() => {
-    fetch("http://localhost:3000/users")
-    .then(res => res.json())
-    .then(u => {
-      console.log(u)
-    })
-  }, [])
+  // useEffect(() => {
+  //   fetch("http://localhost:3000/users")
+  //   .then(res => res.json())
+  //   .then(u => {
+  //     console.log(u)
+  //   })
+  // }, [])
 
 
   return (
     <div className="App">
       <Header />
       <About />
-      <MainFeed />
       <TopSwings />
+      <MainFeed />
     </div>
   );
 }

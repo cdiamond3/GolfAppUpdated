@@ -1,12 +1,12 @@
 
 import "./popup.css"
 
-const Popup = props => {
+const Popup = ({handleClose, content}) => {
     return (
         <div className="popup-box">
             <div className="box">
-                <span className="close-icon" onClick={props.handleClose}>x</span>
-                {props.content}
+                <span className="close-icon" onClick={handleClose}>x</span>
+                {content}
             </div>
         </div>
     );

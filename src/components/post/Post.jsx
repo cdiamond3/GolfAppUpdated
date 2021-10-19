@@ -10,7 +10,7 @@ export default function Post() {
                     <h3> Username </h3>
                     <h5> Fix My Slice </h5>
                 </span>
-                <span className="postDate"> 1 Hour Ago </span>
+                <span className="postDate"> Posted: 1 Hour Ago </span>
             </div>
             <img
                 src="https://www.leadersedge.com/wp-content/uploads/2020/09/1020_TechNoSavvy_Briefly_AI-Gets-into-the-swing.jpg"
