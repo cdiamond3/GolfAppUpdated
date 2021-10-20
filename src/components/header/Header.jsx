@@ -28,6 +28,18 @@ export default function Header() {
                     className="teacherButton">
                     Find A Teacher
                 </button>
+                <button
+                    className="teacherButton">
+                    New Score Card
+                </button>
+                <button
+                    className="teacherButton">
+                    My Score Cards
+                </button>
+                <button
+                    className="teacherButton">
+                    My Handicap
+                </button>
             </div>
 
             <div className="center">

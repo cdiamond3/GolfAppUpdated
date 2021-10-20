@@ -1,3 +1,4 @@
+import RatingBar from "../ratingBar/RatingBar"
 import "./post.css"
 
 export default function Post() {
@@ -28,8 +29,8 @@ export default function Post() {
                 <br />
                 <br />
                 <p2> User: You Are Coming Over The Top. </p2>
+                <RatingBar /> Rate This Comment
             </div>
         </div>
     )
-}
-
+z
