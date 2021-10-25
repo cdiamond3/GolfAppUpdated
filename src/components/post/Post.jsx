@@ -28,9 +28,9 @@ export default function Post() {
                 <i className="fas fa-comment"></i>
                 <br />
                 <br />
-                <p2> User: You Are Coming Over The Top. </p2>
+                <p> User: You Are Coming Over The Top. </p>
                 <RatingBar /> Rate This Comment
             </div>
         </div>
     )
-z
+}

@@ -3,14 +3,66 @@ import { useState } from "react"
 import Popup from "../popup/Popup"
 
 export default function Header() {
-
+    
+    const [newUserName, setNewUserName] = useState("")
+    const [newUserPassword, setNewUserPassword] = useState("")
     const [openPopup, setOpenPopup] = useState(false)
+    const [user, setUser] = useState({})
 
+    const handleLogin = event => {
+        event.preventDefault();
+        fetch('http://localhost:3000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                user: {
+                    username: newUserName,
+                    password: newUserPassword
+                }
+            })
+        })
+            .then(response => response.json())
+            .then(result => {
+                if (result.error) {
+                    console.error(result.error);
+                } else {
+                    localStorage.setItem('token', result.token)
+                    setUser(result)
+                }
+            });
+        setNewUserName('');
+        setNewUserPassword('');
+    }
+
+    const saveUser = (e) => {
+        e.preventDefault()
+        const newUser = {
+            "username": newUserName,
+            "password": newUserPassword,
+        }
+        fetch("http://localhost:3000/users", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                "Accept": 'application/json'
+            },
+            body: JSON.stringify((newUser))
+        })
+            .then(console.log(newUser))
+    }
 
     const handlePopup = () => {
         setOpenPopup(!openPopup)
     }
 
+    const handleChangePassword = (e) => {
+        setNewUserPassword(e.target.value)
+    }
+    const handleChangeUser = (e) => {
+        setNewUserName(e.target.value)
+    }
 
     return (
         <div className="headerContainer">
@@ -50,27 +102,27 @@ export default function Header() {
                 <ul className="rightButtons">
                     <i className="uploadButton fas fa-upload"></i>
                 </ul>
-
                 <button
                     onClick={handlePopup}
                     className="loginButton">
                     Login
                 </button>
-
                 {openPopup && <Popup
                     content={<>
-                        <form class="form-container">
+
+                        <form className="form-container">
                             <h1>Login</h1>
-                            <label for="email"><b>Email</b></label>
-                            <input type="text" placeholder="Enter Email" name="email" required />
-
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" required />
-
-                            <button type="submit" class="btn">Login</button>
-                            <button type="button" class="btn cancel" onClick={handlePopup}>Close</button>
+                            <label ><b>Email</b></label>
+                            <input type="input" placeholder="Enter Email" onChange={handleChangeUser} />
+                            <label><b>Password</b></label>
+                            <input type="input" placeholder="Enter Password" onChange={handleChangePassword} />
+                            <button type="submit" className="btn" onClick={handleLogin}>Login</button>
+                            <br></br>
+                            <button type="submit" className="btn" onClick={(e) => saveUser(e)}>Create</button>
+                            <button type="button" className="btn cancel" onClick={handlePopup}>Close</button>
                         </form>
                     </>}
+
                     handleClose={handlePopup}
                 />}
                 <img
