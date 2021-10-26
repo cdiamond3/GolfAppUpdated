@@ -1,16 +1,25 @@
 import RatingBar from "../ratingBar/RatingBar"
+import { useState } from "react"
 import "./post.css"
 
 export default function Post() {
+    const [comment,setComment] = useState("")
+    const [commentArea, setCommentArea] = useState([])
+
+    const handleComment = (e) => {
+        e.preventDefault()
+        setComment(e.target.value)
+        console.log(comment)
+    }
 
 
     return (
         <div className="post">
             <div className="postInfo">
-                <span className="postTitle">
-                    <h3> Username </h3>
-                    <h5> Fix My Slice </h5>
+                <span className="postUser">
+                    <h2> Username </h2>
                 </span>
+                    <span className="postTitle"> Fix My Slice </span>
                 <span className="postDate"> Posted: 1 Hour Ago </span>
             </div>
             <img
@@ -21,15 +30,16 @@ export default function Post() {
             <p className="postDescription">
                 My Ball Won't Stop Going Right!!
             </p>
-            <div className="commentsArea">
-                <p> Comments </p>
+            <div className="comments">
+                <h2 className="commentArea"> Comments </h2>
                 <hr />
-                <input type="text" />
+                <input type="text" className="commentBar" onChange={handleComment}/>
                 <i className="fas fa-comment"></i>
-                <br />
-                <br />
-                <p> User: You Are Coming Over The Top. </p>
-                <RatingBar /> Rate This Comment
+                <p className="commentContent"> 
+                <p className="commentUser">User:</p> 
+                You Are Coming Over The Top. 
+                <RatingBar className="ratingBar" />
+                </p>
             </div>
         </div>
     )

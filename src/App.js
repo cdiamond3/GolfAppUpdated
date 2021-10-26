@@ -10,23 +10,22 @@ function App() {
 
   const [myProfile, setMyProfile] = useState({})
 
-  useEffect(() => {
-    localStorage.getItem("token")
-      .then(result =>
-        fetch("http://localhost:3000/profile", {
-          method: 'GET',
-          headers: {
-            Authorization: `Bearer ${result}`
-          },
-        })
-          .then(res => res.json())
-          .then(data => {
-            // console.log(data.comments)
-            console.log(data)
-            setMyProfile(data)
-          })
-      
-  }, [])
+  // useEffect(() => {
+  //   localStorage.getItem("token")
+  //     .then(result =>
+  //       fetch("http://localhost:3000/profile", {
+  //         method: 'GET',
+  //         headers: {
+  //           Authorization: `Bearer ${result}`
+  //         },
+  //       })
+  //         .then(res => res.json())
+  //         .then(data => {
+  //           // console.log(data.comments)
+  //           console.log(data)
+  //           setMyProfile(data)
+  //         })
+  // }, [])
 
   return (
     <div className="App">

@@ -26,9 +26,10 @@ export default function Header() {
             .then(response => response.json())
             .then(result => {
                 if (result.error) {
-                    console.error(result.error);
+                    alert(result.error);
                 } else {
                     localStorage.setItem('token', result.token)
+                    alert("You have logged in!")
                     setUser(result)
                 }
             });
@@ -51,6 +52,9 @@ export default function Header() {
             body: JSON.stringify((newUser))
         })
             .then(console.log(newUser))
+            .then(
+                alert("You have created a new user!")
+            )
     }
 
     const handlePopup = () => {
@@ -109,13 +113,12 @@ export default function Header() {
                 </button>
                 {openPopup && <Popup
                     content={<>
-
+                        <h1 className="title">Login</h1>
                         <form className="form-container">
-                            <h1>Login</h1>
                             <label ><b>Email</b></label>
                             <input type="input" placeholder="Enter Email" onChange={handleChangeUser} />
                             <label><b>Password</b></label>
-                            <input type="input" placeholder="Enter Password" onChange={handleChangePassword} />
+                            <input type="password" placeholder="Enter Password" onChange={handleChangePassword} />
                             <button type="submit" className="btn" onClick={handleLogin}>Login</button>
                             <br></br>
                             <button type="submit" className="btn" onClick={(e) => saveUser(e)}>Create</button>

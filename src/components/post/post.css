@@ -1,8 +1,8 @@
 .post {
     margin: 25px;
-    width: 625px;
+    width: 25rem;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.494);
+    background-color: rgba(156, 156, 156, 0.494);
     border-radius: 20px;
     backdrop-filter: blur(7px);
     box-shadow: 24, 24, 24, black;
@@ -23,8 +23,7 @@
     align-items: center;
 }
 
-
-.postTitle {
+.postUser {
     font-family: "Josefin Sans", sans-serif;
     font-size: 24px;
     font-weight: 700;
@@ -37,17 +36,49 @@
     font-family: "Lora", serif;
     font-style: italic;
     font-size: 13px;
-    color: rgb(255, 255, 255);
+    color: rgb(187, 187, 187);
 }
 
 .postDescription {
     font-family: "Varela Round", sans-serif;
     font-size: 14px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     line-height: 24px; 
     overflow: hidden;
+    text-align: center;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+}
+
+.postTitle {
+    font-weight: 10;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+.commentBar{
+    width: 90%;
+    border-radius: 10px;
+}
+
+.commentContent {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.commentArea {
+    display: flex;
+    justify-content: center;
+    flex: 3;
+}
+
+.commentUser {
+    font-size: 16px;
+}
+
+.ratingBar {
+    position: relative;
+    top: 10px;
 }

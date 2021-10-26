@@ -69,9 +69,10 @@ ol, li {
 
 .carousel {
     position: relative;
-    padding-top: 75%;
+    padding-top: 25%;
     filter: drop-shadow(0 0 10px #0003);
     perspective: 100px;
+    overflow: hidden;
 }
 
 .carousel__viewport {
@@ -81,7 +82,7 @@ ol, li {
     bottom: 0;
     left: 0;
     display: flex;
-    overflow-x: scroll;
+    overflow:hidden;
     counter-reset: item;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
@@ -204,4 +205,11 @@ ol, li {
 
 .carousel::after {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+
+.aboutMeTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
